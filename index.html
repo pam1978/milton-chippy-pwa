@@ -1,93 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Milton Chippy</title>
-<style>
-body{
-<form action="https://formsubmit.co/el/zoguti" method="POST">
 
-<h2>Place Your Order</h2>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
 
-<p>
-<label>Name</label><br>
-<input type="text" name="Customer Name" required>
-</p>
+<meta name="theme-color" content="#b30000">
 
-<p>
-<label>Phone Number</label><br>
-<input type="tel" name="Phone Number" required>
-</p>
-
-<p>
-<label>Collection Time</label><br>
-<input type="text" name="Collection Time" placeholder="ASAP or 6:30pm">
-</p>
-
-<p>
-<label>Order Details</label><br>
-<textarea name="Order" rows="6" required></textarea>
-</p>
-
-<input type="hidden" name="_subject" value="New Milton Chippy Order">
-
-<a class="button" href="https://formsubmit.co/el/zoguti">
-Start Order
-</a>
-
-</form>
-}
-.header{
-  background:#000;
-  padding:20px;
-}
-.logo-red{
-  color:red;
-}
-.logo-white{
-  color:white;
-}
-.button{
-  background:#ffd600;
-  color:#000;
-  border:none;
-  padding:15px 30px;
-  font-size:20px;
-  font-weight:bold;
-  border-radius:10px;
-}
-.card{
-  margin:20px;
-  padding:20px;
-  border:1px solid #333;
-  border-radius:10px;
-}
-</style>
 </head>
+
 <body>
 
-<div class="header">
-<h1>
-<span class="logo-red">MILTON</span>
-<span class="logo-white">CHIPPY</span>
-</h1>
+<header>
+
+<h1>🍟 Milton Chippy</h1>
+
+<h1>Milton Chippy</h1>
+
 <p>Collection Only • Pay In Store</p>
+
+</header>
+
+<nav>
+
+<button onclick="showCategory('fish')">🍟 Fish & Chips</button>
+
+<button onclick="showCategory('burgers')">🍔 Burgers</button>
+
+<button onclick="showCategory('kebabs')">🥙 Kebabs</button>
+
+<button onclick="showCategory('chicken')">🍗 Chicken</button>
+
+<button onclick="showCategory('pies')">🥧 Pies</button>
+
+<button onclick="showCategory('extras')">🥗 Extras</button>
+
+<button onclick="showCategory('desserts')">🍰 Desserts</button>
+
+<button onclick="showCategory('glutenfree')">🌿 Gluten Free</button>
+
+<button onclick="showCategory('vegan')">🌱 Vegan</button>
+
+</nav>
+
+<section id="menu">
+
+<h2>Welcome</h2>
+
+<p>Select a category above to begin your order.</p>
+
+</section>
+
+<section id="basket">
+
+<h2>🛒 Basket</h2>
+
+<div id="basketItems">
+
+Your basket is empty.
+
 </div>
 
-<div class="card">
-<h2>Order Online</h2>
-<p>Fish • Kebabs • Burgers • Gluten Free • Vegan</p>
+<h3>Total £<span id="total">0.00</span></h3>
 
-<button class="button">
-Start Order
+<button id="checkout">
+
+Checkout
+
 </button>
-</div>
 
-<div class="card">
-<h3>Open 7 Days</h3>
-<p>1885 Leek Road, Milton, Stoke-on-Trent</p>
-<p>01782 766634</p>
-</div>
+</section>
+
+<footer>
+
+<p>
+
+Open 7 Days
+
+</p>
+
+<p>
+
+1885 Leek Road
+
+Milton
+
+Stoke-on-Trent
+
+ST2 7AQ
+
+</p>
+
+<p>
+
+01782 766634
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
